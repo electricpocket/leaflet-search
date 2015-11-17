@@ -517,7 +517,7 @@ L.Control.Search = L.Control.extend({
 				}
 				else
 				{ //	throw new Error("propertyName '"+propName+"' not found in feature");
-					console.log("propertyName '"+propName+"' not found in feature" + layer.feature.ship.mmsi);
+					console.log("propertyName '"+propName+"' not found in feature" + layer.feature.properties.ship.mmsi);
 					
 				}
 			}
