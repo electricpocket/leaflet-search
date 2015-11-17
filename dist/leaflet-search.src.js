@@ -515,8 +515,11 @@ L.Control.Search = L.Control.extend({
 					retRecords[ that._getPath(layer.feature.properties,propName) ] = loc;
 					
 				}
-				//else
-				//	throw new Error("propertyName '"+propName+"' not found in marker");
+				else
+				{ //	throw new Error("propertyName '"+propName+"' not found in feature");
+					console.log("propertyName '"+propName+"' not found in feature" + layer.feature.ship.mmsi);
+					
+				}
 			}
             else if(layer.hasOwnProperty('feature'))//GeoJSON
 			{
@@ -526,8 +529,11 @@ L.Control.Search = L.Control.extend({
 					loc.layer = layer;			
 					retRecords[ layer.feature.properties[propName] ] = loc;
 				}
-				//else
-				//	throw new Error("propertyName '"+propName+"' not found in feature");
+				else
+				{ //	throw new Error("propertyName '"+propName+"' not found in feature");
+					
+					
+				}
 			}
 			else if(layer instanceof L.LayerGroup)
             {
